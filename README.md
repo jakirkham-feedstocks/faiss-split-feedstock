@@ -44,6 +44,13 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
+              <td>linux_64_cuda_compiler_version10.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9713&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/faiss-split-feedstock?branchName=master&jobName=linux&configuration=linux_64_cuda_compiler_version10.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_cuda_compiler_version10.2</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9713&branchName=master">
@@ -55,13 +62,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9713&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/faiss-split-feedstock?branchName=master&jobName=linux&configuration=linux_64_cuda_compiler_version11.0" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_cuda_compiler_version11.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9713&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/faiss-split-feedstock?branchName=master&jobName=linux&configuration=linux_64_cuda_compiler_version11.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -110,6 +110,7 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-faiss--gpu-green.svg)](https://anaconda.org/conda-forge/faiss-gpu) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/faiss-gpu.svg)](https://anaconda.org/conda-forge/faiss-gpu) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/faiss-gpu.svg)](https://anaconda.org/conda-forge/faiss-gpu) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/faiss-gpu.svg)](https://anaconda.org/conda-forge/faiss-gpu) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-faiss--proc-green.svg)](https://anaconda.org/conda-forge/faiss-proc) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/faiss-proc.svg)](https://anaconda.org/conda-forge/faiss-proc) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/faiss-proc.svg)](https://anaconda.org/conda-forge/faiss-proc) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/faiss-proc.svg)](https://anaconda.org/conda-forge/faiss-proc) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-libfaiss-green.svg)](https://anaconda.org/conda-forge/libfaiss) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libfaiss.svg)](https://anaconda.org/conda-forge/libfaiss) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libfaiss.svg)](https://anaconda.org/conda-forge/libfaiss) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libfaiss.svg)](https://anaconda.org/conda-forge/libfaiss) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libfaiss--avx2-green.svg)](https://anaconda.org/conda-forge/libfaiss-avx2) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libfaiss-avx2.svg)](https://anaconda.org/conda-forge/libfaiss-avx2) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libfaiss-avx2.svg)](https://anaconda.org/conda-forge/libfaiss-avx2) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libfaiss-avx2.svg)](https://anaconda.org/conda-forge/libfaiss-avx2) |
 
 Installing faiss-split
 ======================
@@ -120,10 +121,10 @@ Installing `faiss-split` from the `conda-forge` channel can be achieved by addin
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `faiss, faiss-cpu, faiss-gpu, faiss-proc, libfaiss` can be installed with:
+Once the `conda-forge` channel has been enabled, `faiss, faiss-cpu, faiss-gpu, faiss-proc, libfaiss, libfaiss-avx2` can be installed with:
 
 ```
-conda install faiss faiss-cpu faiss-gpu faiss-proc libfaiss
+conda install faiss faiss-cpu faiss-gpu faiss-proc libfaiss libfaiss-avx2
 ```
 
 It is possible to list all of the versions of `faiss` available on your platform with:
@@ -188,9 +189,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
